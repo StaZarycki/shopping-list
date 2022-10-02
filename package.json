@@ -1,0 +1,33 @@
+{
+  "name": "shopping-list",
+  "version": "0.0.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "postinstall": "husky install",
+    "build": "turbo run build",
+    "build:server": "turbo run build --filter=server",
+    "dev": "turbo run dev --parallel",
+    "dev:server": "turbo run dev --filter=server",
+    "lint": "turbo run lint",
+    "lint:server": "turbo run lint --filter=server",
+    "test": "turbo run test",
+    "test:server": "turbo run test --filter=server",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+  },
+  "devDependencies": {
+    "@commitlint/cli": "17.1.2",
+    "@commitlint/config-conventional": "17.1.0",
+    "eslint-config-custom": "workspace:*",
+    "husky": "8.0.1",
+    "prettier": "latest",
+    "turbo": "latest"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "packageManager": "pnpm@7.10.0"
+}

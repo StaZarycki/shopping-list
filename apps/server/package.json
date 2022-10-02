@@ -1,0 +1,22 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "ts-node-dev --respawn src/index.ts --clear --transpile-only",
+    "build": "tsc",
+    "test": "mocha",
+    "lint": "npx eslint src/**"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.12",
+    "@typescript-eslint/eslint-plugin": "^5.38.1",
+    "@typescript-eslint/parser": "^5.38.1",
+    "eslint": "8.24.0",
+    "mocha": "10.0.0",
+    "supertest": "6.2.4",
+    "ts-node-dev": "2.0.0",
+    "tsconfig": "workspace:*",
+    "typescript": "4.8.4"
+  }
+}
